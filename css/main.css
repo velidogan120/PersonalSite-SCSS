@@ -1,0 +1,498 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 1.4rem;
+  margin: auto;
+}
+
+.btn-primary {
+  display: inline-block;
+  transition: all 1s;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1.2rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  box-shadow: 0 20px 50px rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  background: crimson;
+}
+.btn-primary:before {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  content: "";
+  width: 50%;
+  background: rgba(255, 255, 255, 0.12);
+}
+.btn-primary span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #e91640, #2f040d);
+  animation: animate1 2s linear infinite;
+}
+.btn-primary span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #e91640, #2f040d);
+  animation: animate2 2s linear infinite;
+  animation-delay: 1s;
+}
+.btn-primary span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, #e91640, #2f040d);
+  animation: animate3 2s linear infinite;
+}
+.btn-primary span:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, #e91640, #2f040d);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1s;
+}
+.btn-primary:hover {
+  color: crimson;
+  background-color: #fff;
+}
+.btn-black {
+  display: inline-block;
+  transition: all 1s;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1.2rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  box-shadow: 0 20px 50px rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  background: #000;
+}
+.btn-black:before {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  content: "";
+  width: 50%;
+  background: rgba(0, 0, 0, 0.12);
+}
+.btn-black span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #000, #fff);
+  animation: animate1 2s linear infinite;
+}
+.btn-black span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #000, #fff);
+  animation: animate2 2s linear infinite;
+  animation-delay: 1s;
+}
+.btn-black span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, #000, #fff);
+  animation: animate3 2s linear infinite;
+}
+.btn-black span:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, #000, #fff);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1s;
+}
+.btn-black:hover {
+  color: rgb(0, 0, 0);
+  background-color: #fff;
+}
+
+.bg-dark {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.bg-primary {
+  background-color: crimson;
+}
+.bg-light {
+  background-color: #f4f4f4;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+.py-4 {
+  padding: 4rem 0;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 2rem 0;
+}
+.my-3 {
+  margin: 3rem 0;
+}
+.my-4 {
+  margin: 4rem 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.border-bottom {
+  height: 3px;
+  width: 3rem;
+  background-color: crimson;
+  margin: 0 auto 1rem auto;
+}
+
+.lead {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  word-spacing: 2px;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes animate3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animate4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.main {
+  height: 100vh;
+  animation: slide 10s infinite alternate;
+  position: relative;
+}
+.main > .container {
+  position: relative;
+  height: 100%;
+}
+.main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.main .social {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.main .social a {
+  width: auto;
+  padding: 0.5rem 1rem;
+  top: 0;
+  left: 0;
+  transform: none;
+}
+.main-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  position: relative;
+}
+.main-info * {
+  z-index: 1;
+}
+.main-info > * {
+  width: 50%;
+}
+.main-info-left h1 {
+  font-size: 5rem;
+  animation: color 4s infinite alternate linear;
+}
+.main-info-left .contact-form {
+  display: grid;
+  grid-template-areas: "name surname" "email email" "message message" "button button";
+  gap: 1rem;
+}
+.main-info-left .contact-form .name {
+  grid-area: name;
+  animation: color 4s infinite alternate linear;
+}
+.main-info-left .contact-form .surname {
+  grid-area: surname;
+}
+.main-info-left .contact-form .email {
+  grid-area: email;
+}
+.main-info-left .contact-form .message {
+  grid-area: message;
+  height: 10rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid crimson;
+  color: #fff;
+}
+.main-info-left .contact-form .message::placeholder {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+.main-info-left .contact-form .message:focus {
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  padding: 1.2rem;
+  color: rgb(0, 0, 0);
+}
+.main-info-left .contact-form .btn-primary {
+  grid-area: button;
+  padding: 1rem;
+}
+.main-info-left .contact-form input {
+  border-radius: 5px;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid crimson;
+  color: #fff;
+}
+.main-info-left .contact-form input::placeholder {
+  font-size: 1.2rem;
+}
+.main-info-left .contact-form input:focus {
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0);
+}
+.main-info-right {
+  position: relative;
+}
+.main-info-right .image {
+  text-align: center;
+  position: relative;
+}
+.main-info-right .image img {
+  border-radius: 50%;
+  width: 40%;
+}
+.main-info-right .image:hover .cover {
+  background-color: rgba(0, 0, 0, 0);
+}
+.main-info-right .image .cover {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 41%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 2s;
+}
+.main-info-right article {
+  margin: 1rem 0;
+  color: #fff;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+}
+.main .projects {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.main .projects > * {
+  z-index: 6;
+}
+.main .projects img {
+  width: 10rem;
+}
+.main .projects > * {
+  position: relative;
+  transition: all 2s;
+}
+.main .projects > *:hover {
+  box-shadow: 0 0 15px 15px crimson;
+}
+.main .projects > *::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+  pointer-events: none;
+  transition: all 2s;
+}
+.main .projects > *:hover::after {
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+}
+
+@keyframes slide {
+  0% {
+    background: url("../img/r7.webp") no-repeat center/cover;
+  }
+  25% {
+    background: url("../img/coding2.png") no-repeat center/cover;
+  }
+  50% {
+    background: url("../img/wallpaperbetter.com_7680x4320 (31).jpg") no-repeat center/cover;
+  }
+  75% {
+    background: url("../img/edit.png") no-repeat center/cover;
+  }
+  100% {
+    background: url("../img/ırl.webp") no-repeat center/cover;
+  }
+}
+@keyframes color {
+  0% {
+    color: white;
+  }
+  25% {
+    color: crimson;
+  }
+  50% {
+    color: aqua;
+  }
+  75% {
+    color: hotpink;
+  }
+  100% {
+    color: goldenrod;
+  }
+}
+@media (max-width: 1050px) {
+  .main {
+    height: 100%;
+  }
+  .main-info {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .main-info-left .contact-form {
+    grid-template-areas: "name" "surname" "email" "message" "button";
+  }
+  .main-info-right .image::after {
+    left: 141px;
+    width: 41%;
+    height: 40%;
+  }
+  .main-info > * {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
