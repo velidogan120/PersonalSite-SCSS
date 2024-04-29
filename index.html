@@ -45,11 +45,43 @@
             <div class="main-info">
                 <div class="main-info-left">
                     <h1>WE SOLVE</h1>
-                    <form class="contact-form" action="https://formspree.io/f/xvoevlow" method="post">
-                        <input name="name" type="text" class="name input" placeholder="Name">
-                        <input name="surname" type="text" class="surname input" placeholder="Surname">
-                        <input name="email" type="email" class="email input" placeholder="Please enter your email...">
-                        <textarea name="message" class="message input" placeholder="Enter your messsage..."></textarea>
+                    <form class="contact-form needs-validation" action="https://formspree.io/f/xvoevlow" method="post" novalidate>
+                        <div class="name">
+                            <input name="name" type="text" class="input w-100" placeholder="Name" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please Enter your name
+                            </div>
+                        </div>
+                        <div class="surname">
+                            <input name="surname" type="text" class="input w-100" placeholder="Surname" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please Enter your surname
+                            </div>
+                        </div>
+                        <div class="email">
+                            <input name="email" type="email" class="input w-100" placeholder="Please enter your email..." required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please Enter your email
+                            </div>
+                        </div>
+                        <div class="message">
+                            <textarea name="message" class="input w-100" placeholder="Enter your messsage..." required></textarea>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please Enter your message...
+                            </div>
+                        </div>
                         <button type="submit" class="btn-primary">
                             <span></span>
                             <span></span>
@@ -86,6 +118,11 @@
                 </div>
             </div> 
             <div class="projects container">
+                <div>
+                    <a href="https://velidogan120.github.io/E-commerce/" target="_blank">
+                        <img src="img/invidual-projects/E-commerce-vize1.png" alt="">
+                    </a>
+                </div>  
                 <div>
                     <a href="https://velidogan120.github.io/movieapp/" target="_blank">
                         <img src="img/invidual-projects/MovieApp.png" alt="">
@@ -130,9 +167,40 @@
                     <a href="https://velidogan120.github.io/SmartPos-SCSS/" target="_blank">
                         <img src="img/invidual-projects/Smart-POS.png" alt="">
                     </a>
-                </div>                     
+                </div>     
+                <div>
+                    <a href="https://velidogan120.github.io/Hosthub-Bootstrap-SCSS/" target="_blank">
+                        <img src="img/invidual-projects/Hosthub.png" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://velidogan120.github.io/Imagine-Bootstrap/" target="_blank">
+                        <img src="img/invidual-projects/Imagine.png" alt="">
+                    </a>
+                </div>                
             </div>                  
         </div>
     </main>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+    </script>
 </body>
 </html>
