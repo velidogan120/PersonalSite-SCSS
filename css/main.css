@@ -12254,6 +12254,7 @@ img {
 }
 .main .projects img {
   width: 10rem;
+  height: 80px;
 }
 .main .projects > * {
   position: relative;
