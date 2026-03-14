@@ -12109,6 +12109,8 @@ img {
 }
 .main {
   animation: slide 10s infinite alternate;
+  height: 100%;
+  min-height: 100vh;
   position: relative;
 }
 .main > .container {
